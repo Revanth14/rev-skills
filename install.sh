@@ -30,7 +30,7 @@ for entry in "${SKILLS[@]}"; do
   args=()
   for n in $names; do args+=(--skill "$n"); done
   echo "==> $src: $names"
-  npx -y skills add "$src" "${args[@]}" --agent "$AGENT" -y ${EXTRA[@]+"${EXTRA[@]}"}
+  npx -y skills add "$src" "${args[@]}" --agent "$AGENT" -y ${EXTRA[@]+"${EXTRA[@]}"} </dev/null
 done
 
 echo "Done. Installed rev-skills for $AGENT."
