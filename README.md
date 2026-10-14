@@ -22,7 +22,11 @@ Or install just the `rev-skills` meta skill, then ask your agent to run `/rev-sk
 npx skills add Revanth14/rev-skills --skill rev-skills -y
 ```
 
-Targets Claude Code by default. Set `SKILLS_AGENT` to install for another agent, e.g. `SKILLS_AGENT=codex`.
+Targets Claude Code by default. For another agent, set `SKILLS_AGENT` on `bash`, after the pipe:
+
+```bash
+curl -fsSL skills.revanth.io | SKILLS_AGENT=codex bash
+```
 
 ## The workflow
 

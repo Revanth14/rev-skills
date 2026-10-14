@@ -136,7 +136,7 @@ footer a { color: var(--ink); }
 
 @media (max-width: 640px) {
   .skill { grid-template-columns: 1fr; gap: .2rem; }
-  .cmd pre { font-size: .85rem; }
+  .cmd pre { font-size: .85rem; white-space: pre-wrap; overflow-wrap: anywhere; }
   .copy { min-width: 72px; }
 }
 </style>
@@ -168,10 +168,14 @@ footer a { color: var(--ink); }
         <button class="copy" type="button">Copy</button>
       </div>
       <div class="cmd cmd-secondary">
+        <div class="cmd-body"><span class="cmd-label">For Codex, or another agent</span><pre>curl -fsSL skills.revanth.io | SKILLS_AGENT=codex bash</pre></div>
+        <button class="copy" type="button">Copy</button>
+      </div>
+      <div class="cmd cmd-secondary">
         <div class="cmd-body"><span class="cmd-label">Just the meta skill, then run /rev-skills</span><pre>npx skills add Revanth14/rev-skills --skill rev-skills -y</pre></div>
         <button class="copy" type="button">Copy</button>
       </div>
-      <p class="note">Needs Node.js. Targets Claude Code by default; set <code>SKILLS_AGENT=codex</code> for another agent. Read <a href="https://github.com/Revanth14/rev-skills/blob/main/install.sh">the script</a> before piping it to bash.</p>
+      <p class="note">Needs Node.js. Targets Claude Code by default; <code>SKILLS_AGENT</code> goes on <code>bash</code>, after the pipe. Read <a href="https://github.com/Revanth14/rev-skills/blob/main/install.sh">the script</a> before piping it to bash.</p>
     </section>
 
     <section class="skills" aria-labelledby="skills-title">
