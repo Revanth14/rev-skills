@@ -5,6 +5,11 @@
       "source": "/",
       "has": [{ "type": "header", "key": "user-agent", "value": "(?i).*(curl|wget|powershell|httpie).*" }],
       "destination": "/install.sh"
+    },
+    {
+      "source": "/",
+      "missing": [{ "type": "header", "key": "user-agent", "value": "(?i).*(curl|wget|powershell|httpie).*" }],
+      "destination": "/home.html"
     }
   ],
   "headers": [
