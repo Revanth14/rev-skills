@@ -14,7 +14,6 @@ SKILLS=(
   "samber/cc-skills-golang|golang-concurrency golang-performance golang-testing"
   "anthropics/skills|frontend-design"
   "trailofbits/skills|modern-python"
-  "Jeffallan/claude-skills|spring-boot-engineer"
   "vercel-labs/agent-skills|vercel-react-best-practices web-design-guidelines"
   "Revanth14/rev-skills|pr"
 )

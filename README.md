@@ -44,7 +44,6 @@ curl -fsSL skills.revanth.io | SKILLS_AGENT=codex bash
 | Build | `golang-concurrency` | Goroutine lifecycle, channel ownership, leak prevention | [samber/cc-skills-golang](https://github.com/samber/cc-skills-golang) |
 | Build | `golang-performance` | Allocation, CPU and memory-layout fixes, driven by profiling | [samber/cc-skills-golang](https://github.com/samber/cc-skills-golang) |
 | Build | `modern-python` | Python projects and scripts on uv, ruff and ty | [trailofbits/skills](https://github.com/trailofbits/skills) |
-| Build | `spring-boot-engineer` | Spring Boot 3.x REST, Security 6, Data JPA, WebFlux | [Jeffallan/claude-skills](https://github.com/Jeffallan/claude-skills) |
 | Build | `frontend-design` | Distinctive, intentional UI design | [anthropics/skills](https://github.com/anthropics/skills) |
 | Build | `vercel-react-best-practices` | React / Next.js performance rules | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
 | Debug | `diagnosing-bugs` | Diagnosis loop for hard bugs and perf regressions | [mattpocock/skills](https://github.com/mattpocock/skills) |

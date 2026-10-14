@@ -1,6 +1,6 @@
 ---
 name: rev-skills
-description: Install Revanth's full set of agent skills (repo setup, git guardrails, grilling, specs/tickets, TDD, Go testing/concurrency/performance, Python tooling (uv/ruff), Spring Boot, frontend design, React/Next.js performance, UI audits, bug diagnosis, code review and receiving review, verification before completion, PR bodies, retrospectives) into the current project.
+description: Install Revanth's full set of agent skills (repo setup, git guardrails, grilling, specs/tickets, TDD, Go testing/concurrency/performance, Python tooling (uv/ruff), frontend design, React/Next.js performance, UI audits, bug diagnosis, code review and receiving review, verification before completion, PR bodies, retrospectives) into the current project.
 disable-model-invocation: true
 ---
 
@@ -29,7 +29,6 @@ Installs every skill in Revanth's workflow in one go.
 | golang-concurrency, golang-performance, golang-testing | samber/cc-skills-golang |
 | frontend-design | anthropics/skills |
 | modern-python | trailofbits/skills |
-| spring-boot-engineer | Jeffallan/claude-skills |
 | vercel-react-best-practices, web-design-guidelines | vercel-labs/agent-skills |
 | pr | Revanth14/rev-skills |
 
