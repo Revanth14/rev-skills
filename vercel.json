@@ -1,18 +1,25 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "redirects": [
+  "rewrites": [
     {
       "source": "/",
-      "missing": [{ "type": "header", "key": "user-agent", "value": "(?i).*(curl|wget|powershell|httpie).*" }],
-      "destination": "https://github.com/Revanth14/rev-skills",
-      "permanent": false
+      "has": [{ "type": "header", "key": "user-agent", "value": "(?i).*(curl|wget|powershell|httpie).*" }],
+      "destination": "/install.sh"
     }
   ],
-  "rewrites": [{ "source": "/", "destination": "/install.sh" }],
   "headers": [
     {
-      "source": "/(|install.sh)",
+      "source": "/",
+      "has": [{ "type": "header", "key": "user-agent", "value": "(?i).*(curl|wget|powershell|httpie).*" }],
       "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
+    },
+    {
+      "source": "/install.sh",
+      "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
+    },
+    {
+      "source": "/",
+      "headers": [{ "key": "Vary", "value": "User-Agent" }]
     }
   ]
 }

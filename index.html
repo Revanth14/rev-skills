@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revanth's Skills</title>
+<meta name="description" content="The agent skills Revanth uses every day, installed with one command.">
+<link rel="icon" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --paper: #f2efe6;
+  --white: #fffdf7;
+  --ink: #111311;
+  --ink-soft: #45483f;
+  --line: #c7c6ba;
+  --accent: #14a38b;
+  --accent-bright: #4fd1b9;
+  --blue: #4d50cc;
+  --muted: #b0b7ad;
+  --sans: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  -webkit-font-smoothing: antialiased;
+  background:
+    linear-gradient(#11131106 1px, transparent 1px),
+    linear-gradient(90deg, #11131106 1px, transparent 1px),
+    var(--paper);
+  background-size: 28px 28px;
+}
+
+a { color: inherit; text-underline-offset: 4px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; }
+h1, h2, p, ul { margin: 0; }
+ul { list-style: none; padding: 0; }
+code { font-family: var(--mono); font-size: .88em; }
+
+.shell { width: min(960px, 100%); margin-inline: auto; padding-inline: clamp(1rem, 4vw, 3rem); }
+
+/* Nav */
+.site-nav {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; min-height: 80px; border-bottom: 1px solid var(--line);
+}
+.brand {
+  display: inline-flex; align-items: center; gap: .7rem;
+  font: 800 .9rem var(--mono); letter-spacing: -.04em; text-decoration: none;
+}
+.brand-mark {
+  display: grid; place-items: center; width: 28px; height: 28px;
+  background: var(--ink); color: var(--accent-bright); font: 800 .85rem var(--mono);
+}
+.nav-links { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.nav-links a {
+  display: inline-flex; align-items: center; min-height: 44px;
+  font: 700 .75rem var(--mono); text-decoration: none;
+}
+.nav-links a:hover { text-decoration: underline; }
+
+/* Hero */
+.hero { padding-block: clamp(3rem, 8vw, 5.5rem) 2.5rem; }
+.eyebrow {
+  display: flex; gap: .8rem; align-items: center; margin-bottom: 1.25rem;
+  font: 700 .72rem/1.6 var(--mono); letter-spacing: .06em; text-transform: uppercase;
+}
+.eyebrow::before { content: ""; flex: 0 0 1.8rem; height: 2px; background: var(--ink); }
+h1 {
+  max-width: 14ch; font-size: clamp(2.6rem, 7vw, 4.6rem);
+  font-weight: 800; letter-spacing: -.04em; line-height: 1.05;
+}
+.lede { max-width: 56ch; margin-top: 1.25rem; color: var(--ink-soft); font-size: 1.1rem; }
+
+/* Install */
+.install { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; padding-bottom: 3rem; }
+.cmd {
+  display: flex; align-items: stretch; background: var(--ink); color: var(--white);
+  box-shadow: 6px 6px var(--accent);
+}
+.cmd-body { flex: 1; min-width: 0; padding: 1rem 1.15rem; }
+.cmd-label { display: block; color: var(--muted); font: .68rem/1.5 var(--mono); letter-spacing: .04em; text-transform: uppercase; }
+.cmd pre {
+  margin: .25rem 0 0; overflow-x: auto; font: .95rem/1.6 var(--mono); white-space: pre;
+}
+.cmd pre::before { content: "$ "; color: var(--accent-bright); }
+.copy {
+  flex: 0 0 auto; min-width: 88px; border: 0; border-left: 1px solid #ffffff22;
+  background: transparent; color: var(--accent-bright); cursor: pointer;
+  font: 700 .75rem var(--mono); text-transform: uppercase; letter-spacing: .04em;
+}
+.copy:hover { background: #ffffff10; }
+.cmd-secondary { background: var(--white); color: var(--ink); box-shadow: 4px 4px var(--ink); }
+.cmd-secondary .cmd-label { color: var(--ink-soft); }
+.cmd-secondary pre::before { color: var(--accent); }
+.cmd-secondary .copy { color: var(--ink); border-left-color: var(--line); }
+.cmd-secondary .copy:hover { background: var(--paper); }
+.note { color: var(--ink-soft); font-size: .92rem; }
+
+/* Skills */
+.skills { padding-block: 2.5rem 4rem; border-top: 1px solid var(--line); }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.4rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.1; }
+.skills-intro { margin-top: .75rem; color: var(--ink-soft); }
+.stage { margin-top: 2.25rem; }
+.stage-name {
+  margin-bottom: .6rem; color: var(--ink-soft);
+  font: 700 .72rem/1.6 var(--mono); letter-spacing: .06em; text-transform: uppercase;
+}
+.skill {
+  display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr) auto;
+  gap: .4rem 1.5rem; align-items: baseline;
+  padding: .9rem 0; border-top: 1px solid var(--line);
+}
+.skill-name { font: 700 .92rem var(--mono); }
+.skill-desc { color: var(--ink-soft); }
+.skill-src { font: .72rem var(--mono); color: var(--ink-soft); white-space: nowrap; }
+.skill-src a { text-decoration: none; }
+.skill-src a:hover { text-decoration: underline; }
+.fallback { margin-top: 1.5rem; }
+
+footer {
+  padding-block: 1.75rem 2.5rem; border-top: 1px solid var(--line);
+  color: var(--ink-soft); font: .75rem var(--mono);
+}
+footer a { color: var(--ink); }
+
+@media (max-width: 640px) {
+  .skill { grid-template-columns: 1fr; gap: .2rem; }
+  .cmd pre { font-size: .85rem; }
+  .copy { min-width: 72px; }
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <nav class="site-nav" aria-label="Site">
+    <a class="brand" href="https://revanth.io"><span class="brand-mark" aria-hidden="true">R</span>skills.revanth.io</a>
+    <div class="nav-links">
+      <a href="https://revanth.io">revanth.io</a>
+      <a href="https://github.com/Revanth14/rev-skills">GitHub</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Agent skills</p>
+      <h1>The skills my agents use every day.</h1>
+      <p class="lede">One command installs <span id="count">all of them</span> into Claude Code, Codex, or any agent that reads skills: planning, TDD, review, Go, Python, Spring and React.</p>
+    </section>
+
+    <section class="install" aria-label="Install">
+      <div class="cmd">
+        <div class="cmd-body"><span class="cmd-label">Into the current project</span><pre>curl -fsSL skills.revanth.io | bash</pre></div>
+        <button class="copy" type="button">Copy</button>
+      </div>
+      <div class="cmd cmd-secondary">
+        <div class="cmd-body"><span class="cmd-label">Globally, for every project</span><pre>curl -fsSL skills.revanth.io | bash -s -- -g</pre></div>
+        <button class="copy" type="button">Copy</button>
+      </div>
+      <div class="cmd cmd-secondary">
+        <div class="cmd-body"><span class="cmd-label">Just the meta skill, then run /rev-skills</span><pre>npx skills add Revanth14/rev-skills --skill rev-skills -y</pre></div>
+        <button class="copy" type="button">Copy</button>
+      </div>
+      <p class="note">Needs Node.js. Targets Claude Code by default; set <code>SKILLS_AGENT=codex</code> for another agent. Read <a href="https://github.com/Revanth14/rev-skills/blob/main/install.sh">the script</a> before piping it to bash.</p>
+    </section>
+
+    <section class="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">What gets installed</h2>
+      <p class="skills-intro">Picked one per job, so no two skills fight over the same task.</p>
+      <div id="skill-list"></div>
+      <p class="fallback" id="fallback">The full list is in the <a href="https://github.com/Revanth14/rev-skills#the-workflow">README on GitHub</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    MIT · <a href="https://github.com/Revanth14/rev-skills">source</a> · <a href="https://revanth.io">revanth.io</a>
+  </footer>
+</div>
+
+<script>
+document.querySelectorAll(".copy").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    var text = btn.parentElement.querySelector("pre").textContent;
+    var done = function () {
+      btn.textContent = "Copied";
+      setTimeout(function () { btn.textContent = "Copy"; }, 1500);
+    };
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(done, function () { btn.textContent = "Select"; });
+    } else {
+      btn.textContent = "Select";
+    }
+  });
+});
+
+// The README table is the single source of truth for the skill list.
+var REPO = "https://github.com/Revanth14/rev-skills/blob/main/";
+var ROW = /^\|\s*([^|]+?)\s*\|\s*`([^`]+)`\s*\|\s*(.+?)\s*\|\s*\[([^\]]+)\]\(([^)]+)\)\s*\|\s*$/;
+
+function withCode(el, text) {
+  text.split("`").forEach(function (part, i) {
+    if (!part) return;
+    if (i % 2) { var c = document.createElement("code"); c.textContent = part; el.appendChild(c); }
+    else el.appendChild(document.createTextNode(part));
+  });
+}
+
+fetch("/README.md").then(function (r) {
+  if (!r.ok) throw new Error(r.status);
+  return r.text();
+}).then(function (md) {
+  var stages = [], byStage = {}, total = 0;
+  md.split("\n").forEach(function (line) {
+    var m = ROW.exec(line);
+    if (!m || m[1] === "Stage") return;
+    if (!byStage[m[1]]) { byStage[m[1]] = []; stages.push(m[1]); }
+    byStage[m[1]].push({ name: m[2], desc: m[3], src: m[4], href: /^https?:/.test(m[5]) ? m[5] : REPO + m[5] });
+    total++;
+  });
+  if (!total) return;
+  var list = document.getElementById("skill-list");
+  stages.forEach(function (stage) {
+    var sec = document.createElement("div"); sec.className = "stage";
+    var h = document.createElement("p"); h.className = "stage-name"; h.textContent = stage; sec.appendChild(h);
+    var ul = document.createElement("ul");
+    byStage[stage].forEach(function (s) {
+      var li = document.createElement("li"); li.className = "skill";
+      var n = document.createElement("span"); n.className = "skill-name"; n.textContent = s.name;
+      var d = document.createElement("span"); d.className = "skill-desc"; withCode(d, s.desc);
+      var src = document.createElement("span"); src.className = "skill-src";
+      var a = document.createElement("a"); a.href = s.href; a.textContent = s.src; src.appendChild(a);
+      li.append(n, d, src); ul.appendChild(li);
+    });
+    sec.appendChild(ul); list.appendChild(sec);
+  });
+  document.getElementById("count").textContent = total + " skills";
+  document.getElementById("fallback").hidden = true;
+}).catch(function () {});
+</script>
+</body>
+</html>
