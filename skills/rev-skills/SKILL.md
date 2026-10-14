@@ -24,7 +24,7 @@ Installs every skill in Revanth's workflow in one go.
 
 | Skill | Source |
 | --- | --- |
-| code-review, diagnosing-bugs, git-guardrails-claude-code, grill-with-docs, grilling, implement, retro, setup-matt-pocock-skills, tdd, to-spec, to-tickets | mattpocock/skills |
+| code-review, codebase-design, diagnosing-bugs, domain-modeling, git-guardrails-claude-code, grill-with-docs, grilling, implement, retro, setup-matt-pocock-skills, tdd, to-spec, to-tickets, writing-for-agents | mattpocock/skills |
 | receiving-code-review, verification-before-completion | obra/superpowers |
 | golang-concurrency, golang-performance, golang-testing | samber/cc-skills-golang |
 | frontend-design | anthropics/skills |

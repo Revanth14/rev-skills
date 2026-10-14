@@ -36,6 +36,8 @@ curl -fsSL skills.revanth.io | SKILLS_AGENT=codex bash
 | Setup | `git-guardrails-claude-code` | Hooks that block push, `reset --hard`, `clean`, `branch -D` before they run | [mattpocock/skills](https://github.com/mattpocock/skills) |
 | Think | `grilling` | Grills me relentlessly on a plan, decision, or idea | [mattpocock/skills](https://github.com/mattpocock/skills) |
 | Think | `grill-with-docs` | Same interview, but writes ADRs and a glossary as it goes | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| Think | `domain-modeling` | Keeps `GLOSSARY.md` and ADRs current; the docs half of `grill-with-docs` | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| Think | `codebase-design` | Vocabulary for deep modules, interfaces and seams; used by `tdd` | [mattpocock/skills](https://github.com/mattpocock/skills) |
 | Plan | `to-spec` | Turns the conversation into a spec on the issue tracker | [mattpocock/skills](https://github.com/mattpocock/skills) |
 | Plan | `to-tickets` | Breaks a spec into tracer-bullet tickets with blocking edges | [mattpocock/skills](https://github.com/mattpocock/skills) |
 | Build | `implement` | Implements work from a spec or set of tickets | [mattpocock/skills](https://github.com/mattpocock/skills) |
@@ -53,6 +55,7 @@ curl -fsSL skills.revanth.io | SKILLS_AGENT=codex bash
 | Review | `receiving-code-review` | Weighs review feedback on its merits instead of agreeing by default | [obra/superpowers](https://github.com/obra/superpowers) |
 | Ship | `pr` | PR and issue bodies as Problem / Fix / Testing / Context, with before/after test evidence | [Revanth14/rev-skills](skills/pr/SKILL.md) |
 | Reflect | `retro` | Runs a retrospective on a coding session | [mattpocock/skills](https://github.com/mattpocock/skills) |
+| Reflect | `writing-for-agents` | Style guide for skills and CLAUDE.md; used by `retro` | [mattpocock/skills](https://github.com/mattpocock/skills) |
 
 ## Updating the list
 

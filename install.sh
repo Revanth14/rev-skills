@@ -9,7 +9,7 @@ EXTRA=("$@")
 
 # source repo -> space-separated skill names
 SKILLS=(
-  "mattpocock/skills|code-review diagnosing-bugs git-guardrails-claude-code grill-with-docs grilling implement retro setup-matt-pocock-skills tdd to-spec to-tickets"
+  "mattpocock/skills|code-review codebase-design diagnosing-bugs domain-modeling git-guardrails-claude-code grill-with-docs grilling implement retro setup-matt-pocock-skills tdd to-spec to-tickets writing-for-agents"
   "obra/superpowers|receiving-code-review verification-before-completion"
   "samber/cc-skills-golang|golang-concurrency golang-performance golang-testing"
   "anthropics/skills|frontend-design"
